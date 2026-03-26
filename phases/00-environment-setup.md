@@ -25,6 +25,33 @@ brew install git
 git --version
 ```
 
+### Windows
+
+1. **Install Git + Git Bash:**
+   - Download from https://git-scm.com/download/win
+   - During install, select "Use Git from Git Bash only"
+   - Select "Checkout as-is, commit Unix-style line endings"
+   - This gives you a Unix-like terminal (Git Bash) on Windows
+
+2. **Install Node.js:**
+   - Download from https://nodejs.org (LTS version)
+   - Or use nvm-windows: https://github.com/coreybutler/nvm-windows
+   ```bash
+   # After installing nvm-windows
+   nvm install lts
+   nvm use lts
+   node -v   # should print v22.x or higher
+   ```
+
+3. **Install pnpm:**
+   ```bash
+   corepack enable
+   corepack prepare pnpm@latest --activate
+   pnpm -v   # should print 10.x
+   ```
+
+4. **Recommended:** Install [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701) for a better terminal experience. Set Git Bash as the default profile.
+
 ### VS Code
 
 1. Download from https://code.visualstudio.com
@@ -39,6 +66,54 @@ git --version
    - Open Settings (`Cmd + ,`)
    - Search "format on save"
    - Check the box
+
+### Claude Code (AI assistant in terminal)
+
+Claude Code is an AI coding assistant that runs in your terminal. It can read your code, suggest changes, run commands, and help you learn.
+
+**Install:**
+
+```bash
+# Install globally via npm
+npm install -g @anthropic-ai/claude-code
+```
+
+**Setup:**
+
+```bash
+# Start Claude Code in your project
+cd your-project
+claude
+
+# First time: it will ask you to log in
+# Follow the browser link to authenticate with your Anthropic account
+```
+
+**How to use:**
+
+```bash
+# Start a conversation
+claude
+
+# Ask questions about your code
+> explain this function
+
+# Ask it to make changes
+> add a dark mode toggle to this component
+
+# Run a slash command
+> /help
+```
+
+**Tips for learning:**
+- Ask Claude to explain code you don't understand: "what does this useEffect do?"
+- Ask for comparisons: "show me this in JavaScript vs TypeScript"
+- Ask for review: "review my code for improvements"
+- Use `/help` to see all available commands
+
+**Project setup:** When you clone a MirrorStack repo, Claude reads the `CLAUDE.md` file to understand the project conventions. You don't need to explain the project context — it already knows.
+
+---
 
 ## 2. Terminal basics
 
@@ -212,6 +287,7 @@ You're ready for Phase 1 when you can:
 - [ ] Clone a repo, create a branch, commit, push
 - [ ] Open a Pull Request on GitHub
 - [ ] Understand what a commit, branch, and PR are
+- [ ] Run `claude` in a project and ask it a question
 
 ---
 
