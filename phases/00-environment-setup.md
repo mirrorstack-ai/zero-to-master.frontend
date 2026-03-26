@@ -71,28 +71,46 @@ git --version
 
 Claude Code is an AI coding assistant that runs in your terminal. It can read your code, suggest changes, run commands, and help you learn.
 
-**Install:**
+**Install Claude Code:**
 
+macOS:
 ```bash
-# Install globally via npm
+brew install claude-code
+```
+
+Windows (in Git Bash or PowerShell):
+```bash
+winget install Anthropic.ClaudeCode
+```
+
+Or via npm (any platform):
+```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
-**Setup:**
+**First run:**
 
 ```bash
-# Start Claude Code in your project
 cd your-project
 claude
-
-# First time: it will ask you to log in
-# Follow the browser link to authenticate with your Anthropic account
+# First time: follow the browser link to log in with your Anthropic account
 ```
+
+**Install Everything Claude Code plugin:**
+
+This adds extra skills (code review, testing, architecture, etc.) to Claude Code.
+
+```bash
+# Inside Claude Code, run:
+/install-github mirrorstack-ai/everything-claude-code
+```
+
+Or manually: clone https://github.com/anthropics/everything-claude-code and follow the setup instructions.
 
 **How to use:**
 
 ```bash
-# Start a conversation
+# Start a conversation in your project
 claude
 
 # Ask questions about your code
@@ -101,15 +119,17 @@ claude
 # Ask it to make changes
 > add a dark mode toggle to this component
 
-# Run a slash command
-> /help
+# Use slash commands
+> /help              # see all commands
+> /simplify          # review and clean up code
+> /commit            # commit changes
 ```
 
 **Tips for learning:**
 - Ask Claude to explain code you don't understand: "what does this useEffect do?"
 - Ask for comparisons: "show me this in JavaScript vs TypeScript"
 - Ask for review: "review my code for improvements"
-- Use `/help` to see all available commands
+- Use `/simplify` after writing code to improve quality
 
 **Project setup:** When you clone a MirrorStack repo, Claude reads the `CLAUDE.md` file to understand the project conventions. You don't need to explain the project context — it already knows.
 
