@@ -1,5 +1,11 @@
 # Zero to Master: Frontend
 
+> **⚠️ Early Stage — Outline not finalized**
+>
+> This project is in early development. The roadmap structure, phases, and content are still being defined and may change significantly. Only Phase 00 is written so far.
+>
+> **Want to contribute?** We welcome feedback on the outline and structure — open an issue or join us on [Slack](https://join.slack.com/t/mirrorstackai/shared_invite/zt-3twmj15cm-EPfQscE71I~JJj0yHK6EZg) to discuss before writing content. Please don't start writing phases that aren't confirmed yet.
+
 Frontend learning roadmap from zero to L3 Software Engineer at [MirrorStack](https://mirrorstack.com).
 
 [繁體中文版](tw/README.md)
