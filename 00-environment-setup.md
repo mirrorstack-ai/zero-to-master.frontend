@@ -14,9 +14,23 @@
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 nvm install --lts
 
-# Install pnpm
-corepack enable
-corepack prepare pnpm@latest --activate
+# Download and install Homebrew
+curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+
+# Download and install Node.js:
+brew install node@25
+
+# Verify the Node.js version:
+node -v # Should print "v25.9.0".
+
+# Install Corepack:
+npm install -g corepack
+
+# Download and install pnpm:
+corepack enable pnpm
+
+# Verify pnpm version:
+pnpm -v
 ```
 
 ### Windows
